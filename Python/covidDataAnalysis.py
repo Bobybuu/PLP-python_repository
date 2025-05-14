@@ -17,7 +17,7 @@ print(df.isnull().sum())
 df['date'] = pd.to_datetime(df['date'])
 
 # Filter for specific countries
-countries = ['Algeria', 'Albania', 'India']
+countries = ['USA', 'Kenya', 'India']
 df_filtered = df[df['location'].isin(countries)]
 
 # Drop rows with missing key metrics
@@ -68,16 +68,17 @@ plt.tight_layout()
 plt.savefig("total_deaths_over_time.png")
 plt.show()
 
+
 #Daily new cases
-Algeria_data = df_filtered[df_filtered['location'] == 'Algeria']
+Kenya_data = df_filtered[df_filtered['location'] == 'Kenya']
 
 plt.figure(figsize=(10,6))
-plt.bar(Algeria_data['date'], Algeria_data['new_cases'], color='red')
-plt.title("Daily New COVID-19 Cases in Algeria")
+plt.bar(Kenya_data['date'], Kenya_data['new_cases'], color='red')
+plt.title("Daily New COVID-19 Cases in Kenya")
 plt.xlabel("Date")
 plt.ylabel("New Cases")
 plt.tight_layout()
-plt.savefig("daily_new_cases_Algeria.png")
+plt.savefig("daily_new_cases_Kenya.png")
 plt.show()
 
 
