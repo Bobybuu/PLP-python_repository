@@ -1,0 +1,6 @@
+
+Sales Summary:
+--------------
+Total Revenue: $110,200.00
+Best-Selling Product: Smartwatch
+Day with Highest Sales: 2025-01-05
